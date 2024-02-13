@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_home_skills",
+  "info": {
+    "displayName": "Skills"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "richtext"
+    },
+    "items": {
+      "displayName": "Skill Card",
+      "type": "component",
+      "repeatable": true,
+      "component": "home.skill-card"
+    }
+  }
+}

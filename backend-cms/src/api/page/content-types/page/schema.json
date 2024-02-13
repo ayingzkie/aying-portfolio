@@ -15,7 +15,8 @@
     "sections": {
       "type": "dynamiczone",
       "components": [
-        "home.hero"
+        "home.hero",
+        "home.skills"
       ]
     },
     "slug": {

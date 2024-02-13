@@ -374,7 +374,7 @@ export interface ApiPagePage extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    sections: Attribute.DynamicZone<['home.hero']>;
+    sections: Attribute.DynamicZone<['home.hero', 'home.skills']>;
     slug: Attribute.UID<'api::page.page', 'title'> & Attribute.Required;
     title: Attribute.String;
     description: Attribute.Text;

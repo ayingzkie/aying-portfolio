@@ -1,32 +1,42 @@
 import classNames from "classnames";
 
 import style from "./Header.module.scss";
+import Link from "next/link";
 
-interface LinkTypes {
+interface LinkType {
   title: string;
   path: string;
 }
 
-const links: LinkTypes[] = [
+const links: LinkType[] = [
   {
     title: "Home",
     path: "/",
   },
   {
     title: "About",
-    path: "#about",
+    path: "/about",
   },
   {
     title: "Skills",
-    path: "#skills",
+    path: "/#skills",
   },
   {
     title: "Projects",
-    path: "#projects",
+    path: "/#projects",
   },
 ];
 
 export default function Header() {
+  function renderLink(link: LinkType) {
+    const cn = classNames("font-extralight");
+    return (
+      <Link className={cn} key={link.path} href={link.path}>
+        {link.title}
+      </Link>
+    );
+  }
+
   return (
     <div className="container m-auto">
       <nav
@@ -36,11 +46,7 @@ export default function Header() {
         )}
       >
         {links.map((link, i: number) => {
-          return (
-            <a key={i} href={link.path} className="font-extralight">
-              {link.title}
-            </a>
-          );
+          return renderLink(link);
         })}
       </nav>
     </div>
