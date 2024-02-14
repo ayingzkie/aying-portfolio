@@ -15,6 +15,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         $eq: params.slug,
       },
     },
+    populate: "deep",
   });
 
   return {

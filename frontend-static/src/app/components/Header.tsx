@@ -38,8 +38,8 @@ export default function Header() {
   }
 
   return (
-    <div className="container m-auto">
-      <nav
+    <header className="container m-auto">
+      <div
         className={classNames(
           "pt-10 pb-10 flex justify-center",
           style.headerStyle
@@ -48,7 +48,7 @@ export default function Header() {
         {links.map((link, i: number) => {
           return renderLink(link);
         })}
-      </nav>
-    </div>
+      </div>
+    </header>
   );
 }

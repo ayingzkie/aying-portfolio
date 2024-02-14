@@ -3,8 +3,12 @@ import sectionRenderer from "@/util/section-renderer";
 
 export default async function Home() {
   const page = await fetchAPI("/pages", {
-    slug: "home",
-    populate: "*",
+    filters: {
+      slug: {
+        $eq: "home",
+      },
+    },
+    populate: "deep",
   });
 
   const sections = page.data[0]?.attributes?.sections || [];

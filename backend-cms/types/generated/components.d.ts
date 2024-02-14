@@ -15,7 +15,8 @@ export interface HomeHero extends Schema.Component {
 export interface HomeSkillCard extends Schema.Component {
   collectionName: 'components_home_skill_cards';
   info: {
-    displayName: 'Skill Card';
+    displayName: 'Card Item';
+    description: '';
   };
   attributes: {
     isDark: Attribute.Boolean;
@@ -27,7 +28,8 @@ export interface HomeSkillCard extends Schema.Component {
 export interface HomeSkills extends Schema.Component {
   collectionName: 'components_home_skills';
   info: {
-    displayName: 'Skills';
+    displayName: 'Cards';
+    description: '';
   };
   attributes: {
     text: Attribute.RichText;
