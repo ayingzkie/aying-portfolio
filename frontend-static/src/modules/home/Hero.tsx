@@ -1,16 +1,15 @@
 import classNames from "classnames";
 import styles from "./Hero.module.scss";
 import Markdown from "react-markdown";
+import SectionContainer from "@/app/components/SectionContainer";
+import { customH1 } from "../shared/markdownElements";
 
 interface HeroSectionType {
   content: string;
 }
 
 const components = {
-  h1: (props: any) => {
-    const { node, ...restProps } = props;
-    return <h1 className="font-semibold text-5xl" {...restProps} />;
-  },
+  h1: customH1,
   em: (props: any) => {
     const { node, ...rest } = props;
 
@@ -25,8 +24,8 @@ const components = {
 
 export default function HeroSection(data: HeroSectionType) {
   return (
-    <section className={classNames("p-4 rounded-sm lg:rounded-lg")}>
+    <SectionContainer className={classNames("rounded-sm lg:rounded-lg")}>
       <Markdown components={{ ...components }}>{data.content}</Markdown>
-    </section>
+    </SectionContainer>
   );
 }

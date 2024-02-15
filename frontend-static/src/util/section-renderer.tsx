@@ -1,4 +1,4 @@
-import Cards from "@/app/components/Cards";
+import Cards from "@/modules/home/Cards";
 import HeroSection from "@/modules/home/Hero";
 
 export default function sectionRenderer(section: any, index: number) {
