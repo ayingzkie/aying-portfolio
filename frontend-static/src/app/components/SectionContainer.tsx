@@ -4,7 +4,7 @@ import { HTMLAttributes } from "react";
 export default function SectionContainer(props: HTMLAttributes<HTMLElement>) {
   const { className, children, ...rest } = props;
   return (
-    <section className={cn(className, "p-4")} {...rest}>
+    <section className={cn("p-4", className)} {...rest}>
       {children}
     </section>
   );

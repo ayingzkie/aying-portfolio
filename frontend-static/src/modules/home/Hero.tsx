@@ -24,7 +24,9 @@ const components = {
 
 export default function HeroSection(data: HeroSectionType) {
   return (
-    <SectionContainer className={classNames("rounded-sm lg:rounded-lg")}>
+    <SectionContainer
+      className={classNames("container rounded-sm lg:rounded-lg min-h-screen")}
+    >
       <Markdown components={{ ...components }}>{data.content}</Markdown>
     </SectionContainer>
   );
